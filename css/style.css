@@ -86,7 +86,7 @@ textarea::placeholder {
 }
 
 .secondary-content i.no_active {
-  float: right;
+  /* float: right; */
   color: #d1d1d1;
 }
 
@@ -94,7 +94,7 @@ body.login {
   height: 100%;
 }
 
-body.home footer, body.login footer {
+body.home footer, body.login footer, body.ficha footer {
   bottom: 0px;
   position: absolute;
   width: 100%;
@@ -130,4 +130,31 @@ body.login .card {
 
 .waves-effect input[value="Login"] {
   color: #fff;
+}
+
+body.ficha .card {
+  box-shadow: none;
+}
+
+.card-content h4 {
+  margin: -20px 0px 0px 0px;
+}
+
+.location {
+  margin-top: -20px;
+  margin-right: -20px;
+}
+.location i {
+  font-size: 40px;
+  vertical-align: middle;
+}
+
+.points {
+  margin: 20px -10px -20px 0px;
+}
+.col.s12 > .btn-large {
+  width: 100%;
+  bottom: 75px;
+  position: fixed;
+  margin: 0px -10px;
 }
