@@ -15,3 +15,61 @@
 .icon-block .material-icons {
 	font-size: inherit;
 }
+
+.user_header img {
+  width: 48px;
+  position: absolute;
+  margin: 5px -40px;
+  border: solid 1px #FFF;
+}
+
+.search i {
+  right: 0px;
+}
+
+.search form div.row {
+  margin-bottom: -20px;
+}
+.result {
+  font-size: 20px;
+  text-align: center;
+  margin-top: -20px;
+}
+
+.result span {
+  font-weight: bold;
+}
+
+.collection .collection-item.avatar {
+  min-height: 80px;
+}
+
+.collection-item img {
+  width: 60px !important;
+  height: 60px !important;
+}
+
+.collection .collection-item.avatar .title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 15px;
+}
+
+.collection .collection-item.avatar p {
+  margin: 5px 15px;
+  font-size: 15px;
+}
+
+.collection .collection-item.avatar .secondary-content {
+  top: 10px;
+}
+
+.secondary-content H5 {
+  text-align: right;
+  margin: 0 2px 5px 0;
+}
+
+.secondary-content i.no_active {
+  float: right;
+  color: #d1d1d1;
+}
