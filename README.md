@@ -1,13 +1,19 @@
 # Worker-App
 
 ##Sketches
-![Home](./img/sketch-01-home.png)
-![Resultados de búsqueda](./img/sketch-02-resultados-busqueda.png)
-![Detalles del profesional](./img/sketch-03-pro-detalle.png)
-![Detalles del profesional (mapa)](./img/sketch-03-modal-pro-detalle.png)
-![Chat](./img/sketch-04-chat.png)
-![Ticket](./img/sketch-05-ticket.png)
+
+1. ![Home](./doc/sketch-01-home.png)
+
+2. ![Resultados de búsqueda](./doc/sketch-02-resultados-busqueda.png)
+
+3. ![Detalles del profesional](./doc/sketch-03-pro-4. detalle.png)
+
+4. ![Detalles del profesional (mapa)](./doc/sketch-03-modal-5. pro-detalle.png)
+
+5. ![Chat](./doc/sketch-04-chat.png)
+
+6. ![Ticket](./doc/sketch-05-ticket.png)
 
 ##Historias de usuario
 
-![Historia de usuario 01](./img/user-story-01.png)
+1. ![Historia de usuario 01](./doc/user-story-01.png)
