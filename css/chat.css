@@ -9,6 +9,11 @@ html, body {
   color: inherit;
 }
 
+nav {
+    position: fixed;
+    z-index: 999999999;
+}
+
 /* M E N U */
 
 .menu {
