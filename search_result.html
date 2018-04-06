@@ -1,133 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
   <title>Starter Template - Materialize</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
 </head>
+
 <body>
 
 
   <nav class="orange darken-4" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="./index.html" class="brand-logo">WorkerAPP</a>
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="./index.html" class="brand-logo">WorkerAPP</a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Mi Perfil</a></li>
+
+        <li>
+          <a href="./index.html">Inicio</a>
+        </li>
+        <li>
+          <a href="./chat.html">Chat</a>
+        </li>
+        <li>
+          <a href="./ticket.html">Último Ticket</a>
+        </li>
+        <li>
+          <a href="#">Histórico Tickets</a>
+        </li>
+        <li>
+          <a href="#">Mis Favoritos</a>
+        </li>
+
       </ul>
 
       <ul id="nav-mobile" class="sidenav">
-        <li><a href="#">Mi Perfil</a></li>
+
+        <li>
+          <a href="./index.html">Inicio</a>
+        </li>
+        <li>
+          <a href="./chat.html">Chat</a>
+        </li>
+        <li>
+          <a href="./ticket.html">Último Ticket</a>
+        </li>
+        <li>
+          <a href="#">Histórico Tickets</a>
+        </li>
+        <li>
+          <a href="#">Mis Favoritos</a>
+        </li>
+
       </ul>
       <ul class="right user_header">
-          <li><a href="./login.html"><img src="imgs/no_user.png" alt="" class="circle"></a></li>
-        </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <li>
+          <a href="./login.html">
+            <img src="./imgs/no_user.png" alt="" class="circle">
+          </a>
+        </li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+        <i class="material-icons">menu</i>
+      </a>
     </div>
   </nav>
-  
-    <div class="row search">
-      <form class="col s12">
-        <div class="row">
-          <div class="input-field col s12">
-            <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
-            <label for="icon_prefix2">Buscar</label>
-            <i class="material-icons prefix">search</i>
-          </div>
+
+  <div class="row search">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+          <label for="icon_prefix2">Buscar</label>
+          <i class="material-icons prefix">search</i>
         </div>
-      </form>
-    </div>
+      </div>
+    </form>
+  </div>
 
-    <div>
-      <p class="result">Se han encontrado 8 resultados de<br><span>"Entrenador Personal"</span></p>
-    </div>
+  <div>
+    <p class="result">Se han encontrado 8 resultados de
+      <br>
+      <span>"Entrenador Personal"</span>
+    </p>
+  </div>
 
-    <ul class="collection">
+  <ul class="collection">
 
-      <li class="collection-item avatar">
-        <img src="imgs/Manolo-entrenador-personal.jpg" alt="" class="circle">
-        <span class="title">Manolo</span>
-        <p>Entrenador Personal</p>
-        <a href="./login.html" class="secondary-content">
-          <h5>0.3Km</h5>
-          <i class="material-icons">grade</i><i class="material-icons">grade</i><i class="material-icons">grade</i><i class="material-icons">grade</i><i class="material-icons no_active">grade</i></a>
-      </li>
+    <li class="collection-item avatar">
+      <img src="./imgs/Manolo-entrenador-personal.jpg" alt="" class="circle">
+      <span class="title">Manolo</span>
+      <p>Entrenador Personal</p>
+      <a href="./login.html" class="secondary-content">
+        <h5>0.3Km</h5>
+        <i class="material-icons">grade</i>
+        <i class="material-icons">grade</i>
+        <i class="material-icons">grade</i>
+        <i class="material-icons">grade</i>
+        <i class="material-icons no_active">grade</i>
+      </a>
+    </li>
 
-      <li class="collection-item avatar">
-        <img src="imgs/Alexandra-entrenadora-personal.jpg" alt="" class="circle">
-        <span class="title">Alexandra</span>
-        <p>Entrenador Personal</p>
-        <a href="./login.html" class="secondary-content">
-          <h5>0.35Km</h5>
-          <i class="material-icons">grade</i><i class="material-icons">grade</i><i class="material-icons">grade</i><i class="material-icons no_active">grade</i><i class="material-icons no_active">grade</i></a>
-      </li>
+    <li class="collection-item avatar">
+      <img src="./imgs/Alexandra-entrenadora-personal.jpg" alt="" class="circle">
+      <span class="title">Alexandra</span>
+      <p>Entrenador Personal</p>
+      <a href="./login.html" class="secondary-content">
+        <h5>0.35Km</h5>
+        <i class="material-icons">grade</i>
+        <i class="material-icons">grade</i>
+        <i class="material-icons">grade</i>
+        <i class="material-icons no_active">grade</i>
+        <i class="material-icons no_active">grade</i>
+      </a>
+    </li>
 
-      <li class="collection-item avatar">
-        <img src="imgs/Western-entrenador-personal.jpg" alt="" class="circle">
-        <span class="title">Western</span>
-        <p>Entrenador Personal</p>
-        <a href="./login.html" class="secondary-content">
-          <h5>0.4Km</h5>
-          <i class="material-icons">grade</i><i class="material-icons">grade</i><i class="material-icons">grade</i><i class="material-icons">grade</i><i class="material-icons no_active">grade</i></a>
-      </li>
+    <li class="collection-item avatar">
+      <img src="imgs/Western-entrenador-personal.jpg" alt="" class="circle">
+      <span class="title">Western</span>
+      <p>Entrenador Personal</p>
+      <a href="./login.html" class="secondary-content">
+        <h5>0.4Km</h5>
+        <i class="material-icons">grade</i>
+        <i class="material-icons">grade</i>
+        <i class="material-icons">grade</i>
+        <i class="material-icons">grade</i>
+        <i class="material-icons no_active">grade</i>
+      </a>
+    </li>
 
-      <li class="collection-item avatar">
-        <img src="imgs/Jose-entrenadora-personal.jpg" alt="" class="circle">
-        <span class="title">Jose</span>
-        <p>Entrenador Personal</p>
-        <a href="./login.html" class="secondary-content">
-          <h5>0.6Km</h5>
-          <i class="material-icons">grade</i><i class="material-icons">grade</i><i class="material-icons">grade</i><i class="material-icons no_active">grade</i><i class="material-icons no_active">grade</i></a>
-      </li>
+    <li class="collection-item avatar">
+      <img src="imgs/Jose-entrenadora-personal.jpg" alt="" class="circle">
+      <span class="title">Jose</span>
+      <p>Entrenador Personal</p>
+      <a href="./login.html" class="secondary-content">
+        <h5>0.6Km</h5>
+        <i class="material-icons">grade</i>
+        <i class="material-icons">grade</i>
+        <i class="material-icons">grade</i>
+        <i class="material-icons no_active">grade</i>
+        <i class="material-icons no_active">grade</i>
+      </a>
+    </li>
 
-      <li class="collection-item avatar">
-        <img src="imgs/Carmina-entrenadora-personal.jpg" alt="" class="circle">
-        <span class="title">Carmina</span>
-        <p>Entrenador Personal</p>
-        <a href="./login.html" class="secondary-content">
-          <h5>0.75Km</h5>
-          <i class="material-icons">grade</i><i class="material-icons">grade</i><i class="material-icons">grade</i><i class="material-icons">grade</i><i class="material-icons no_active">grade</i></a>
-      </li>
+    <li class="collection-item avatar">
+      <img src="imgs/Carmina-entrenadora-personal.jpg" alt="" class="circle">
+      <span class="title">Carmina</span>
+      <p>Entrenador Personal</p>
+      <a href="./login.html" class="secondary-content">
+        <h5>0.75Km</h5>
+        <i class="material-icons">grade</i>
+        <i class="material-icons">grade</i>
+        <i class="material-icons">grade</i>
+        <i class="material-icons">grade</i>
+        <i class="material-icons no_active">grade</i>
+      </a>
+    </li>
 
-      <li class="collection-item avatar">
-        <img src="imgs/Fina-entrenadora-personal.jpg" alt="" class="circle">
-        <span class="title">Fina</span>
-        <p>Entrenador Personal</p>
-        <a href="./login.html" class="secondary-content">
-          <h5>0.8Km</h5>
-          <i class="material-icons">grade</i><i class="material-icons">grade</i><i class="material-icons">grade</i><i class="material-icons">grade</i><i class="material-icons  no_active">grade</i></a>
-      </li>
+    <li class="collection-item avatar">
+      <img src="imgs/Fina-entrenadora-personal.jpg" alt="" class="circle">
+      <span class="title">Fina</span>
+      <p>Entrenador Personal</p>
+      <a href="./login.html" class="secondary-content">
+        <h5>0.8Km</h5>
+        <i class="material-icons">grade</i>
+        <i class="material-icons">grade</i>
+        <i class="material-icons">grade</i>
+        <i class="material-icons">grade</i>
+        <i class="material-icons  no_active">grade</i>
+      </a>
+    </li>
 
-      <li class="collection-item avatar">
-          <img src="imgs/Loli-entrenadora-personal.jpg" alt="" class="circle">
-          <span class="title">Loli</span>
-          <p>Entrenador Personal</p>
-          <a href="./login.html" class="secondary-content">
-            <h5>1.3Km</h5>
-            <i class="material-icons">grade</i><i class="material-icons">grade</i><i class="material-icons">grade</i><i class="material-icons">grade</i><i class="material-icons">grade</i></a>
-        </li>
+    <li class="collection-item avatar">
+      <img src="imgs/Loli-entrenadora-personal.jpg" alt="" class="circle">
+      <span class="title">Loli</span>
+      <p>Entrenador Personal</p>
+      <a href="./login.html" class="secondary-content">
+        <h5>1.3Km</h5>
+        <i class="material-icons">grade</i>
+        <i class="material-icons">grade</i>
+        <i class="material-icons">grade</i>
+        <i class="material-icons">grade</i>
+        <i class="material-icons">grade</i>
+      </a>
+    </li>
 
-        <li class="collection-item avatar">
-            <img src="imgs/Ruben-entrenadora-personal.jpg" alt="" class="circle">
-            <span class="title">Rubén</span>
-            <p>Entrenador Personal</p>
-            <a href="./login.html" class="secondary-content">
-              <h5>2.0Km</h5>
-              <i class="material-icons no_active">grade</i><i class="material-icons no_active">grade</i><i class="material-icons no_active">grade</i><i class="material-icons no_active">grade</i><i class="material-icons no_active">grade</i></a>
-        </li>
-    
+    <li class="collection-item avatar">
+      <img src="imgs/Ruben-entrenadora-personal.jpg" alt="" class="circle">
+      <span class="title">Rubén</span>
+      <p>Entrenador Personal</p>
+      <a href="./login.html" class="secondary-content">
+        <h5>2.0Km</h5>
+        <i class="material-icons no_active">grade</i>
+        <i class="material-icons no_active">grade</i>
+        <i class="material-icons no_active">grade</i>
+        <i class="material-icons no_active">grade</i>
+        <i class="material-icons no_active">grade</i>
+      </a>
+    </li>
 
-    </ul>
-  
+
+  </ul>
+
 
   <footer class="page-footer orange darken-4">
-   
+
     <div class="footer-copyright">
       <div class="container">
-      Made by <a class="white-text text-lighten-3" href="#">BIG BANG Team</a>
+        Made by
+        <a class="white-text text-lighten-3" href="#">BIG BANG Team</a>
       </div>
     </div>
   </footer>
@@ -138,5 +223,6 @@
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
 
-  </body>
+</body>
+
 </html>

@@ -154,7 +154,7 @@ body.ficha .card {
 }
 .col.s12 > .btn-large {
   width: 100%;
-  bottom: 75px;
+  bottom: 0px;
   position: fixed;
   margin: 0px -10px;
 }

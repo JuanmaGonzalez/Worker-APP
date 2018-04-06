@@ -8,8 +8,8 @@
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="./css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="./css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
 </head>
 
 <body class="login">
@@ -19,20 +19,48 @@
     <div class="nav-wrapper container">
       <a id="logo-container" href="./index.html" class="brand-logo">WorkerAPP</a>
       <ul class="right hide-on-med-and-down">
+
         <li>
-          <a href="#">Mi Perfil</a>
+          <a href="./index.html">Inicio</a>
         </li>
+        <li>
+          <a href="./chat.html">Chat</a>
+        </li>
+        <li>
+          <a href="./ticket.html">Último Ticket</a>
+        </li>
+        <li>
+          <a href="#">Histórico Tickets</a>
+        </li>
+        <li>
+          <a href="#">Mis Favoritos</a>
+        </li>
+
       </ul>
 
       <ul id="nav-mobile" class="sidenav">
+
         <li>
-          <a href="#">Mi Perfil</a>
+          <a href="./index.html">Inicio</a>
         </li>
+        <li>
+          <a href="./chat.html">Chat</a>
+        </li>
+        <li>
+          <a href="./ticket.html">Último Ticket</a>
+        </li>
+        <li>
+          <a href="#">Histórico Tickets</a>
+        </li>
+        <li>
+          <a href="#">Mis Favoritos</a>
+        </li>
+
       </ul>
       <ul class="right user_header">
         <li>
           <a href="#">
-            <img src="imgs/no_user.png" alt="" class="circle">
+            <img src="./imgs/no_user.png" alt="" class="circle">
           </a>
         </li>
       </ul>
@@ -43,28 +71,28 @@
   </nav>
 
   <div class="valign-wrapper row login-box">
-      <div class="col card hoverable s10 pull-s1 m6 pull-m3 l4 pull-l4">
-        <form action="./ficha.html">
-          <div class="card-content">
-            <span class="card-title">Login</span>
-            <div class="row">
-              <div class="input-field col s12">
-                <label for="email">Usuario:</label>
-                <input type="email" class="validate" name="email" id="email" />
-              </div>
-              <div class="input-field col s12">
-                <label for="password">Contraseña:</label>
-                <input type="password" class="validate" name="password" id="password" />
-              </div>
+    <div class="col card hoverable s10 pull-s1 m6 pull-m3 l4 pull-l4">
+      <form action="./ficha.html">
+        <div class="card-content">
+          <span class="card-title">Login</span>
+          <div class="row">
+            <div class="input-field col s12">
+              <label for="email">Usuario:</label>
+              <input type="email" class="validate" name="email" id="email" required />
+            </div>
+            <div class="input-field col s12">
+              <label for="password">Contraseña:</label>
+              <input type="password" class="validate" name="password" id="password" required/>
             </div>
           </div>
-          <div class="card-action right-align">
-            <input type="reset" id="reset" class="btn-flat grey lighten-3 grey-text waves-effect">
-            <input type="submit" class="btn orange darken-4 waves-effect waves-light" value="Login">
-          </div>
-        </form>
-      </div>
+        </div>
+        <div class="card-action right-align">
+          <input type="reset" id="reset" class="btn-flat grey lighten-3 grey-text waves-effect">
+          <input type="submit" class="btn orange darken-4 waves-effect waves-light" value="Login">
+        </div>
+      </form>
     </div>
+  </div>
 
 
 
@@ -81,8 +109,8 @@
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
+  <script src="./js/materialize.js"></script>
+  <script src="./js/init.js"></script>
 
 </body>
 
