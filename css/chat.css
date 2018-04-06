@@ -406,10 +406,10 @@ emoji.shit{background-image: url(https://i.imgur.com/H5Jba8r.png);}
         margin-bottom: 55px;
     }
     .msg p {
-        font-size: 11px;
+        font-size: 14px;
     }
     .msg .user {
-        font-size: 13px;
+        font-size: 14px;
     }
     .msg img {
         width: 300px;
@@ -420,7 +420,7 @@ emoji.shit{background-image: url(https://i.imgur.com/H5Jba8r.png);}
         width: 40%;
     }
     .chat .day {
-        font-size: 11px;
+        font-size: 14px;
     }
     .emojis {
         width: 25%;
