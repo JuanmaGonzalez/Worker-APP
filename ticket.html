@@ -13,28 +13,54 @@
     <link rel="stylesheet" href="./css/ticket.css" media="screen,proyection" />
 </head>
 
-<body>
-
+<body class="ticket">
 
     <nav class="orange darken-4" role="navigation">
         <div class="nav-wrapper container">
             <a id="logo-container" href="./index.html" class="brand-logo">WorkerAPP</a>
             <ul class="right hide-on-med-and-down">
+
                 <li>
-                    <a href="#">Mi Perfil</a>
+                    <a href="./index.html">Inicio</a>
                 </li>
+                <li>
+                    <a href="./chat.html">Chat</a>
+                </li>
+                <li>
+                    <a href="./ticket.html">Último Ticket</a>
+                </li>
+                <li>
+                    <a href="#">Histórico Tickets</a>
+                </li>
+                <li>
+                    <a href="#">Mis Favoritos</a>
+                </li>
+
             </ul>
 
             <ul id="nav-mobile" class="sidenav">
+
                 <li>
-                    <a href="#">Mi Perfil</a>
+                    <a href="./index.html">Inicio</a>
                 </li>
+                <li>
+                    <a href="./chat.html">Chat</a>
+                </li>
+                <li>
+                    <a href="./ticket.html">Último Ticket</a>
+                </li>
+                <li>
+                    <a href="#">Histórico Tickets</a>
+                </li>
+                <li>
+                    <a href="#">Mis Favoritos</a>
+                </li>
+
             </ul>
             <ul class="right user_header">
                 <li>
                     <a href="#">
-                        <img src="imgs/no_user.png" alt="" class="circle">
-
+                        <img src="./imgs/Rosa-clienta.png" alt="" class="circle">
                     </a>
                 </li>
             </ul>
@@ -62,7 +88,7 @@
                         <h4>Fina Martínez</h4>
                         <p>Entrenador Personal</p>
                         <div class="secondary-content">
-                            <p>Ticket nº (17/160)</p>
+                            <h6>Ticket nº (17/160)</h6>
                         </div>
                     </div>
                 </div>
@@ -74,8 +100,8 @@
 
 
         <!-- fila 2: detalle de servicio realizado -->
-        <div class="row">
-            <div class="col s8">
+        <div class="row fila_ticket">
+            <div class="col s8 column_izq">
                 <p>2 Sesiones/Semana
                     <br>Incluye cuota gimnasio
                     <br> Rutina entrenamiento personalizada
@@ -85,24 +111,24 @@
             </div>
 
             <div class="col s4 col-derecha">
-                <p>Fecha
+                <p>
+                    <b>Fecha</b>
                     <br>06/04/2018
-                    <br>Vencimiento
+                    <br>
+                    <b>Vencimiento</b>
                     <br>06/05/2018
                 </p>
             </div>
         </div>
 
-
         <div class="divider"></div>
-
 
         <!-- fila 3: totales -->
         <div class="row">
             <div class="col s9">
-                <p>Sub TotaL
-                    <br> Iva 21%
-                    <br> Total
+                <p><b>Sub TotaL</b>
+                    <br> <b>Iva 21%</b>
+                    <br> <b>Total</b>
                 </p>
             </div>
             <div class="col s3 col-derecha">
@@ -112,11 +138,10 @@
             </div>
         </div>
 
-
         <div class="divider"></div>
 
-
         <!-- fila 4: método de pago -->
+
         <div class="row">
             <div class="col s12">
                 <div class="operator">
@@ -135,26 +160,22 @@
                             <a href="#!">Transferencia</a>
                         </li>
                     </ul>
-                    <a class="btn dropdown-trigger" href="#!" data-target="dropdown2">Método de Pago
+                    <a class="btn dropdown-trigger orange darken-4" href="#!" data-target="dropdown2">Método de Pago
                         <i class="material-icons right">arrow_drop_down</i>
                     </a>
                 </div>
             </div>
         </div>
 
-
         <!-- fila 5: pagar -->
         <div class="row">
             <div class="input-field col s12">
-                <a href="./chat.html" class="waves-effect waves-light btn-large">Pagar</a>
+                <a href="#" class="waves-effect waves-light amber darken-2 btn-large">Pagar</a>
             </div>
         </div>
     </section>
 
     <!-- TICKET: final -->
-
-
-
 
     <!--  Scripts-->
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
