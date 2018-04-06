@@ -102,7 +102,7 @@ body.home footer, body.login footer, body.ficha footer {
 
 body.home .title {
   position: absolute;
-  top: 45%;
+  top: 200px;
   width: 100%;
   text-align: center;
   color: #fff;
@@ -114,6 +114,11 @@ body.home .title h1 {
   font-size: 60px;
   letter-spacing: 3px;
   font-family: Oswald, sans-serif;
+}
+
+body.home .title img {
+  max-width: 200px;
+  margin: 0px;
 }
 
 body.home .title p {
@@ -154,7 +159,7 @@ body.ficha .card {
 }
 .col.s12 > .btn-large {
   width: 100%;
-  bottom: 75px;
+  bottom: 0px;
   position: fixed;
   margin: 0px -10px;
 }
