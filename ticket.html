@@ -10,30 +10,57 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
-    <link rel="stylesheet" href="./css/ticket.css" media="screen,proyection"/>
+    <link rel="stylesheet" href="./css/ticket.css" media="screen,proyection" />
 </head>
 
-<body class="login">
-
+<body class="ticket">
 
     <nav class="orange darken-4" role="navigation">
         <div class="nav-wrapper container">
             <a id="logo-container" href="./index.html" class="brand-logo">WorkerAPP</a>
             <ul class="right hide-on-med-and-down">
+
                 <li>
-                    <a href="#">Mi Perfil</a>
+                    <a href="./index.html">Inicio</a>
                 </li>
+                <li>
+                    <a href="./chat.html">Chat</a>
+                </li>
+                <li>
+                    <a href="./ticket.html">Último Ticket</a>
+                </li>
+                <li>
+                    <a href="#">Histórico Tickets</a>
+                </li>
+                <li>
+                    <a href="#">Mis Favoritos</a>
+                </li>
+
             </ul>
 
             <ul id="nav-mobile" class="sidenav">
+
                 <li>
-                    <a href="#">Mi Perfil</a>
+                    <a href="./index.html">Inicio</a>
                 </li>
+                <li>
+                    <a href="./chat.html">Chat</a>
+                </li>
+                <li>
+                    <a href="./ticket.html">Último Ticket</a>
+                </li>
+                <li>
+                    <a href="#">Histórico Tickets</a>
+                </li>
+                <li>
+                    <a href="#">Mis Favoritos</a>
+                </li>
+
             </ul>
             <ul class="right user_header">
                 <li>
                     <a href="#">
-                        <img src="imgs/no_user.png" alt="" class="circle">
+                        <img src="./imgs/Rosa-clienta.png" alt="" class="circle">
                     </a>
                 </li>
             </ul>
@@ -43,136 +70,112 @@
         </div>
     </nav>
 
-    <ul class="collection">
-    <li class="collection-item avatar">
-        <img src="imgs/Alexandra-entrenadora-personal.jpg" alt="" class="circle">
-        <span class="title">Alexandra</span>
-        <p>Entrenador Personal</p>
-       
-      </li>
-      </ul>
- <section >
-  
-    <div class="columns">
-        <ul class="price">
-          <li class="header">Basic</li>
-          <li class="grey">50€ / Mes</li>
-          <li>1 Sesión/Semana</li>
-          <li>Incluye rutina entrenamiento personalizado</li>
-          <li>Plan Nutricional personalizado</li>
-          <li>Control y seguimiento</li>
-          <li class="grey"><a href="#" class="button">Lo quiero</a></li>
-        </ul>
-      </div>
-      <div class="columns">
-        <ul class="price">
-          <li class="header2">Medium</li>
-          <li class="blue">110€ / Mes</li>
-          <li>2 Sesiones/Semana</li>
-          <li>Incluye cuota gimnasio</li>
-          <li>Rutina entrenamiento personalizada</li>
-          <li>Plan Nutricional personalizado</li>
-          <li>Control y seguimiento</li>
-          <li class="blue"><a href="#" class="button">Lo quiero</a></li>
-        </ul>
-      </div>
-      <div class="columns">
-        <ul class="price">
-          <li class="header3">Intensive</li>
-          <li class="orange">200€/Mes</li>
-          <li>4 Sesiones/Semana</li>
-          <li>Incluye cuota gimnasio</li>
-          <li>Rutina entrenamiento personalizada</li>
-          <li>Plan Nutricional personalizado</li>
-          <li>Control y seguimiento</li>
-          <li class="orange"><a href="#" class="button">Lo quiero</a></li>
-        </ul>
 
-       
 
-      </div>
-    
-     
-    </section>
 
-  
 
-    <section class="container2">
-        <div class="row">
-            <div class="col s3">Nº123045 <br>Personal Trainer:</div>
-            <div class="col s6">Entrenamiento personalizado <br>Alejandra Puig</div>
-            <div class="col s3">Medium <br> ID 3456 </div>
+    <!-- TICKET: inicio -->
+
+    <section>
+        <!-- fila 1: datos de identificación de ticket -->
+        <div class="col s12 m7">
+            <div class="card horizontal">
+                <div class="card-image">
+                    <img src="./imgs/Fina-entrenadora-personal.jpg">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <h4>Fina Martínez</h4>
+                        <p>Entrenador Personal</p>
+                        <div class="secondary-content">
+                            <h6>Ticket nº (17/160)</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+
+
         <div class="divider"></div>
-        <div class="row">
-            <div class="col s9">
-                <span class="title">2 Sesiones/Semana</span>
-                <p>Incluye cuota gimnasio
+
+
+        <!-- fila 2: detalle de servicio realizado -->
+        <div class="row fila_ticket">
+            <div class="col s8 column_izq">
+                <p>2 Sesiones/Semana
+                    <br>Incluye cuota gimnasio
                     <br> Rutina entrenamiento personalizada
                     <br>Plan Nutricional personalizado
                     <br>Control y seguimiento
-    
                 </p>
             </div>
-            <div class="col s3">110.00 €</div>
 
+            <div class="col s4 col-derecha">
+                <p>
+                    <b>Fecha</b>
+                    <br>06/04/2018
+                    <br>
+                    <b>Vencimiento</b>
+                    <br>06/05/2018
+                </p>
+            </div>
         </div>
 
         <div class="divider"></div>
+
+        <!-- fila 3: totales -->
         <div class="row">
-            <div class="col s9">Sub TotaL</div>
-            <div class="col s3">110.00 €</div>
-
-        </div>
-
-        <div class="row">
-            <div class="col s9">Iva   21%</div>
-            <div class="col s3">23.10 €</div>
-
-        </div>
-
-        <div class="row">
-            <div class="col s9">Total</div>
-            <div class="col s3">133.10 €</div>
-
-        </div>
-
-
-
-       <div class="operator">
-        <ul id="dropdown2" class="dropdown-content">
-            <li ><a href="#!">Tarjeta<span class="badge"></span></a></li>
-            <li><a href="#!">Pay Pal<span class="badge"></span></a></li>
-            <li><a href="#!">Transferencia</a></li>
-          </ul>
-          <a class="btn dropdown-trigger" href="#!" data-target="dropdown2">Método de Pago<i class="material-icons right">arrow_drop_down</i></a>
-        </div>
-
-        <div>
-            <label for="descripcion">Comentarios:</label>
-            <textarea name="descripcion" id="descripcion" cols="30" rows="10" placeholder=""></textarea>
-        </div>
-
-        <div class="primary">
-        <button type="submit" class="btn btn-primary pull-right">Pagar</button>
-        </div>
-      
-    </section>
-
-
-
-    
-    <!-- 
-    <footer class="page-footer orange darken-4">
-
-        <div class="footer-copyright">
-            <div class="container">
-                Made by
-                <a class="white-text text-lighten-3" href="#">BIG BANG Team</a>
+            <div class="col s9">
+                <p><b>Sub TotaL</b>
+                    <br> <b>Iva 21%</b>
+                    <br> <b>Total</b>
+                </p>
+            </div>
+            <div class="col s3 col-derecha">
+                <p>110.00 €
+                    <br> 23.10 €
+                    <br> 133.10 €</p>
             </div>
         </div>
-    </footer> -->
 
+        <div class="divider"></div>
+
+        <!-- fila 4: método de pago -->
+
+        <div class="row">
+            <div class="col s12">
+                <div class="operator">
+                    <ul id="dropdown2" class="dropdown-content">
+                        <li>
+                            <a href="#!">Tarjeta
+                                <span class="badge"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!">Pay Pal
+                                <span class="badge"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!">Transferencia</a>
+                        </li>
+                    </ul>
+                    <a class="btn dropdown-trigger orange darken-4" href="#!" data-target="dropdown2">Método de Pago
+                        <i class="material-icons right">arrow_drop_down</i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- fila 5: pagar -->
+        <div class="row">
+            <div class="input-field col s12">
+                <a href="#" class="waves-effect waves-light amber darken-2 btn-large">Pagar</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TICKET: final -->
 
     <!--  Scripts-->
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
