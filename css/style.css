@@ -302,6 +302,11 @@ body.message_page a:link {
   text-decoration: underline;
 }
 
+.error{
+  color: red;
+  text-align: center;
+}
+
 #map {
   width: 100%;
   height: 410px;

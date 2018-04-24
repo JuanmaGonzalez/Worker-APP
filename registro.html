@@ -76,12 +76,12 @@
       <div class="row">
         <div class="col s12 m12 l12">
           <div id="form-register">
-            <form class="col s12" method="post">
+            <form class="col s12" method="">
               
               <div class="row">
                 <div class="input-field	col s6">
                   <label for="name">Nombre</label>
-                  <input type="text" name="name" id="name" value="">
+                  <input type="text" name="name" id="name" value="" required>
                 </div>	
                 <div class="input-field col s6">
                   <label for="lastname">Apellido</label>
@@ -96,19 +96,22 @@
               </div>
               <div class="row">
                 <div class="input-field col s12">
-                  <label for="remail">Confirmar correo</label>
-                  <input type="email" name="remail" id="remail" value="">
+                  <label for="pass">Password</label>
+                  <input type="password" name="pass" id="pass" value="">
                 </div>
               </div>
               <div class="row">
                 <div class="input-field col s12">
-                  <label for="password">Contrase&ntilde;a</label>
-                  <input type="password" name="password" id="password" value="">
+                  <label for="repass">Confirmar Password</label>
+                  <input type="password" name="repass" id="repass" value="">
                 </div>
               </div>
               <div class="row">
-                <div class="col s12">
-                  <input type="submit" class="btn orange darken-4 waves-effect waves-light" value="Registro">
+                <div class="col s12" id="register">
+                  <input type="submit"  class="btn orange darken-4 waves-effect waves-light" value="Registro">
+                </div>
+                <div id="resultado">
+
                 </div>
               </div>
             </form>
@@ -131,8 +134,7 @@
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="./js/materialize.js"></script>
-  <script src="./js/init.js"></script>
-
+  <script src="./js/register.js"></script>
 </body>
 
 </html>
