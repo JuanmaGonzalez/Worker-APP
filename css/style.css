@@ -301,7 +301,14 @@ body.message_page {
 body.message_page a:link {
   text-decoration: underline;
 }
+<<<<<<< HEAD
 .error{
   color: red;
   text-align: center;
+=======
+
+#map {
+  width: 100%;
+  height: 410px;
+>>>>>>> 012411b8322ab8e9aa4e9ae725819a47f3893661
 }
