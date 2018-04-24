@@ -142,7 +142,7 @@ body.login .card {
   margin-top: 25%;
 }
 
-.waves-effect input[value="Login"] {
+.waves-effect input[value="Login"], .waves-effect input[value="Registro"] {
   color: #fff;
 }
 
@@ -244,4 +244,60 @@ body.ticket .card {
   .columns {
       width: 100%;
   }
+}
+
+
+.container h1 {
+	font-family: "Lobster", cursive;
+	color: #000;
+	font-size: 4em;
+	text-shadow: 3px 3px 0px #BDBDBD;
+}
+ 
+div#form-register, div#form-login {
+	max-width: 400px;
+	padding-top: 50px;
+	margin: auto;
+}
+ 
+
+ 
+ 
+.cyan {
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+}
+ 
+/* INPUT FIELDS */
+/* label color */
+.input-field label {
+ color: #000;
+ font-family: "Lato", sans-serif;
+ font-weight: 300;
+ font-size: 1.2em;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+ color: #000;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus,
+.input-field input[type=email]:focus,
+.input-field input[type=password]:focus {
+ border-bottom: 1px solid #000;
+ box-shadow: 0 1px 0 0 #000;
+}
+ 
+.btn {
+	width: 100%;
+}
+
+
+
+body.message_page {
+  padding-top: 120px;
+}
+
+body.message_page a:link {
+  text-decoration: underline;
 }

@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
-  <title>Login WorkerAPP</title>
+  <title>Registro WorkerAPP</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -75,13 +75,29 @@
     <div class="container">
       <div class="row">
         <div class="col s12 m12 l12">
-          <div id="form-login">
+          <div id="form-register">
             <form class="col s12" method="post">
               
-             <div class="row">
+              <div class="row">
+                <div class="input-field	col s6">
+                  <label for="name">Nombre</label>
+                  <input type="text" name="name" id="name" value="">
+                </div>	
+                <div class="input-field col s6">
+                  <label for="lastname">Apellido</label>
+                  <input type="text" name="lastname" id="lastname" value="">
+                </div>						
+              </div>
+              <div class="row">
                 <div class="input-field col s12">
                   <label for="email">Correo</label>
                   <input type="email" name="email" id="email" value="">
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <label for="remail">Confirmar correo</label>
+                  <input type="email" name="remail" id="remail" value="">
                 </div>
               </div>
               <div class="row">
@@ -92,18 +108,10 @@
               </div>
               <div class="row">
                 <div class="col s12">
-                  <input type="submit" class="btn orange darken-4 waves-effect waves-light" value="Login">
+                  <input type="submit" class="btn orange darken-4 waves-effect waves-light" value="Registro">
                 </div>
               </div>
             </form>
-            <div class="row">
-              <div class="col s5">
-                <a href="./registro.html">Registrarse</a>
-              </div>
-              <div class="col s7">
-                <a href="#">¿Has perdido tu contraseña?</a>
-              </div>
-            </div>
           </div>
         </div>
       </div>
