@@ -301,3 +301,7 @@ body.message_page {
 body.message_page a:link {
   text-decoration: underline;
 }
+.error{
+  color: red;
+  text-align: center;
+}
