@@ -34,4 +34,3 @@ document.getElementById('icon_prefix2').addEventListener('keyup', function (even
         location.href='./search_result.html';
        }
    }
-
