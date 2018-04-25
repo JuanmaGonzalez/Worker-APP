@@ -53,6 +53,7 @@ $('#submitBtn').click(function (event) {
             data: objeto
         }).done(function (datoRecibido) {
             if (datoRecibido.result) {
+                sessionStorage.setItem('token', 'ksjahdfkl23r732w2yedwejhd76348dgwyedg76');
                 location.href = './login_confirm.html';
             } else {
                 $('#pass_error').html('<p class="error">usuario y Contraseña errónea!</p>')

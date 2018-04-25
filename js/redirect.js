@@ -3,6 +3,6 @@ setInterval(function(){
     count--;
     document.getElementById('timecount');
     if (count == 0) {
-        window.location = './index.html'; 
+        window.location = sessionStorage.getItem('ultimaPaginaVisitada'); 
     }
 },1000);
