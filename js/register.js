@@ -1,16 +1,15 @@
 let validar_Registro = function () {
     let _valid = true;
     let _formValues = {};
+    let cadena="";
 
-    // $('form .error').remove();
+    $('form .error').remove();
 
     $('#name').each(function () {
         _formValues[this.name] = this.value;
         let validez_nombre = this.validity;
-
         if (validez_nombre.valueMissing) {
-            $('#resultado').html('<div class="error">Introduce un nombre</div>');
-            
+            $('#resultado1').html('<p class="error">Introduce un nombre</p>');  
         }
 
     });
@@ -19,7 +18,7 @@ let validar_Registro = function () {
         _formValues[this.name] = this.value;
         let validez_apellido = this.validity;
         if (validez_apellido.valueMissing) {
-            $('#resultado').html('<div class="error">Introduce un apellido</div>');
+            $('#resultado2').html('<p class="error">Introduce un apellido</p>');
             
         }
     });
@@ -27,56 +26,39 @@ let validar_Registro = function () {
     $('#email').each(function () {
         _formValues[this.name] = this.value;
         let validez_email = this.validity;
+        let expresion= /\w+@\w+\.[a-z]/;//para el correo
         if (validez_email.valueMissing) {
-            $('#resultado').html('<div class="error">Introduce un correo</div>');
-           
+            $('#resultado3').html('<p class="error">Introduce un correo</p>');  
         }
         if (!validez_email.valid) {
-            $('#mail').html('<div class="error">Introduce un Email Valido</div>');
-            
+            $('#resultado3').html('<p class="error">Introduce un Email Valido</p>');  
         }
     });
 
     $('#pass').each(function () {
         _formValues[this.name] = this.value;
         let validez_pass = this.validity;
-        let exp = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])$/;
+        let exp = /^[a-zA-Z]{1,}$/;
         if (validez_pass.valueMissing) {
-            $('#resultado').html('<div class="error">Introduce un password</div>');
-            
+            $('#resultado6').html('<p class="error">Introduce un password</p>');
         }
-        if (_formValues[this.name].length < 3) {
-            $('#resultado').html('<div class="error">El password debe tener mas de 4 digitos</div>');
-            
-        }
-        // if (_formValues[this.name] == exp) {
-        //     $('#resultado').html('<div class="error">Debe contener un número</div>');
-        // }
+        if (exp.test(_formValues[this.name]) ) {
+            $('#resultado4').html('<p class="error">Debe contener un número</p>');
+       }
     });
 
     $('#repass').each(function () {
         _formValues[this.name] = this.value;
-        let exp = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])$/;
+        let exp = /^[0-9]{1,}$/;
         let validez_repass = this.validity;
-        if (validez_repass.valueMissing) {
-            $('#resultado').html('<div class="error">Vuelve a Introducir el password</div>');
-           
+        if (_formValues.pass!=_formValues.repass){
+            $('#resultado5').html('<p class="error">Los passwords no coinciden</p>');
+            
         }
-        if (_formValues[this.name].length < 3) {
-            $('#resultado').html('<div class="error">El password debe tener mas de 4 digitos</div>');
-           
-        }
-        // if (_formValues[this.name] == exp) {
-        //     $('#resultado').html('<div class="error">Debe contener un número</div>');
-        // }
+       
     });
 
-    if (_formValues.pass!=_formValues.repass){
-        $('#resultado').html('<div class="error">Los passwords no coinciden</div>');
-        
-    }
-
-
+      
         return { valid: _valid, values: _formValues };
 }
 
@@ -96,6 +78,8 @@ $('#register').click(function (evnt) {
         console.log('datoRecibido:',datoRecibido);
         if(datoRecibido.result){
             location.href='./register_confirm.html';
+        }else{
+            
         }
             
         
