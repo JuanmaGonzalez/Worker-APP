@@ -72,16 +72,19 @@
     </nav>
 
     <div class="row search">
-      <form class="col s12">
+      <form class="col s12" >
         <div class="row">
           <div class="input-field col s12">
-            <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+            <textarea id="icon_prefix2" class="materialize-textarea search"></textarea>
             <label for="icon_prefix2">Buscar</label>
-            <i class="material-icons prefix">search</i>
+            <a href="#" id="search_button">
+              <i class="material-icons prefix">search</i>
+            </a>
           </div>
         </div>
       </form>
     </div>
+    <div id="sugerencias"></div>
   </header>
 
   <section>
@@ -107,6 +110,7 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="./js/materialize.js"></script>
   <script src="./js/init.js"></script>
+  <script src="./js/search.js"></script>
   <script src="./js/search_result.js"></script>
 </body>
 
