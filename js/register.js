@@ -29,7 +29,7 @@ let validar_Registro = function () {
         let validez_email = this.validity;
         let expresion = /\w+@\w+\.[a-z]/;//para el correo
         if (validez_email.valueMissing) {
-            $('#resultado3').html('<p class="error">Introduce un correo</p>');
+            $('#resultado3').html('<p class="error">Introduce un Email</p>');
             _valid = false;
         }
         if (!validez_email.valid) {
