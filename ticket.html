@@ -98,7 +98,7 @@
                         <h4>Fina Martínez</h4>
                         <p>Entrenador Personal</p>
                         <div class="secondary-content">
-                            <h6>Ticket nº (17/160)</h6>
+                            <h6 id="ticket"></h6>
                         </div>
                     </div>
                 </div>
@@ -111,22 +111,15 @@
 
         <!-- fila 2: detalle de servicio realizado -->
         <div class="row fila_ticket">
-            <div class="col s8 column_izq">
-                <p>2 Sesiones/Semana
-                    <br>Incluye cuota gimnasio
-                    <br> Rutina entrenamiento personalizada
-                    <br>Plan Nutricional personalizado
-                    <br>Control y seguimiento
-                </p>
-            </div>
+            <div id="conceptos" class="col s8 column_izq"></div>
 
             <div class="col s4 col-derecha">
                 <p>
                     <b>Fecha</b>
-                    <br>06/04/2018
+                    <br><span id="fecha"></span>
                     <br>
                     <b>Vencimiento</b>
-                    <br>06/05/2018
+                    <br><span id="vencimiento"></span>
                 </p>
             </div>
         </div>
@@ -137,14 +130,14 @@
         <div class="row">
             <div class="col s9">
                 <p><b>Sub TotaL</b>
-                    <br> <b>Iva 21%</b>
+                    <br> <b>Iva <span id="iva"></span>%</b>
                     <br> <b>Total</b>
                 </p>
             </div>
             <div class="col s3 col-derecha">
-                <p>110.00 €
-                    <br> 23.10 €
-                    <br> 133.10 €</p>
+                <p><span id="subtotal"></span> €
+                    <br><span id="subtotalIVA"></span> €
+                    <br><span id="total"></span> €</p>
             </div>
         </div>
 
@@ -193,6 +186,7 @@
     <script src="js/init.js"></script>
     <script src="./js/sesion.js"></script>
     <script src="./js/avatar.js"></script>
+    <script src="./js/ticket.js"></script>
 </body>
 
 </html>
