@@ -1,40 +1,45 @@
-console.log('OK');
-
-
-let conexionBBDD = {
-    url: 'http://www.mocky.io/v2/5adf64f63300005200e4d985',
-    method: 'POST'
-}
-
-
-$.ajax(conexionBBDD).done( function (respuestaServidor) {
-    console.log('respuestaServidor', respuestaServidor);
-    let resultados = '';
-    
-    for(i=0;   i < respuestaServidor.resultados.length;   i++) {
-        resultados += `
-        <li class="collection-item avatar">
-            <img src="${respuestaServidor.resultados[i].imagen}" alt="${respuestaServidor.resultados[i].nombre}, ${respuestaServidor.resultados[i].actividad}" class="circle">
-            <span class="title">${respuestaServidor.resultados[i].nombre}</span>
-            <p>${respuestaServidor.resultados[i].actividad}</p>
-            <a href="./login.html" class="secondary-content">
-                <h5>${respuestaServidor.resultados[i].distancia}Km</h5>
-                <i class="${respuestaServidor.resultados[i].distancia > 0 ? 'material-icons no_active' : 'material-icons'}">grade</i>
-                <i class="${respuestaServidor.resultados[i].distancia > 1 ? 'material-icons no_active' : 'material-icons'}">grade</i>
-                <i class="${respuestaServidor.resultados[i].distancia > 2 ? 'material-icons no_active' : 'material-icons'}">grade</i>
-                <i class="${respuestaServidor.resultados[i].distancia > 3 ? 'material-icons no_active' : 'material-icons'}">grade</i>
-                <i class="${respuestaServidor.resultados[i].distancia > 4 ? 'material-icons no_active' : 'material-icons'}">grade</i>
-            </a>
-        </li>`;
+(function () {
+    let conexionBBDD = {
+        url: 'http://www.mocky.io/v2/5ae08c473200002a00510c65',
+        method: 'POST'
     }
-    console.log(resultados);
-    $('#listaResultados').html(resultados);
-    
-    let resumenResultado = `Se ${respuestaServidor.length == 1 ? 'ha' : 'han'} encontrado 
-    ${respuestaServidor.length} ${respuestaServidor.length == 1 ? 'resultado' : 'resultados'} de
-    <br><span>"${respuestaServidor.busqueda}"</span>`;
-    
-    $('#resumenResultado').html(resumenResultado);
-}).fail( function (error) {
-    console.log('error', error);
-});
+
+
+    $.ajax(conexionBBDD).done(function (respuestaServidor) {
+        let profesionales = respuestaServidor.resultados;
+        let resultados = '';
+        for (i = 0; i < profesionales.length; i++) {
+            resultados += `
+            <li class="collection-item avatar itemResultado">
+                <div class="listaClickable">
+                    <img src="${profesionales[i].imagen}" alt="${profesionales[i].nombre}, ${profesionales[i].actividad}" class="circle">
+                    <span class="title">${profesionales[i].nombre}</span>
+                    <p>${profesionales[i].actividad}</p>
+                    <a href="${profesionales[i].detalle}" class="secondary-content">
+                        <h5>${profesionales[i].distancia}Km</h5>
+                        <i class="${profesionales[i].distancia > 0 ? 'material-icons no_active' : 'material-icons'}">grade</i>
+                        <i class="${profesionales[i].distancia > 1 ? 'material-icons no_active' : 'material-icons'}">grade</i>
+                        <i class="${profesionales[i].distancia > 2 ? 'material-icons no_active' : 'material-icons'}">grade</i>
+                        <i class="${profesionales[i].distancia > 3 ? 'material-icons no_active' : 'material-icons'}">grade</i>
+                        <i class="${profesionales[i].distancia > 4 ? 'material-icons no_active' : 'material-icons'}">grade</i>
+                    </a>
+                <div>
+            </li>`;
+        }
+
+        $('#listaResultados').html(resultados);
+        let mensajeResultados = `Se ${profesionales.length > 1 ? 'han' : 'ha'} encontrado 
+            ${profesionales.length} ${profesionales.length > 1 ? 'resultados': 'resultado'} de
+            <br><span>"${respuestaServidor.busqueda}"</span>`;
+        $('#resumenResultado').html(mensajeResultados);
+        
+        // una vez actualizado el DOM
+        $('.itemResultado').each(function (i){
+            this.addEventListener('click', function(){
+                location = profesionales[i].detalle;
+            });
+        });
+    }).fail(function (error) {
+        alert('Hubo un error con la petición. Comprueba tu conexión.');
+    });
+}());

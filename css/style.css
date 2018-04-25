@@ -305,6 +305,7 @@ body.message_page a:link {
 .error{
   color: red;
   text-align: center;
+  font-weight: bold;
 }
 
 #map {
@@ -316,11 +317,11 @@ body.message_page a:link {
   text-align: center;
   background-color: #FFF;
   font-size: 16px;
-  color: #777777;
+  color: #000000;
   z-index: 999;
   position: relative;
   opacity: 0.9;
-  top: -43px;
+  top: -20px;
 }
 
 #resultado1,#resultado2,#resultado3,#resultado4,#resultado5,#resultado6{
