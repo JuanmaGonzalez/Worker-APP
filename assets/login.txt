@@ -1,0 +1,6 @@
+http://www.mocky.io/v2/5ae0e1b63200007b00510d5a
+
+{
+    "result": true,
+    "token":  "ksjahdfkl23r732w2yedwejhd76348dgwyedg76"
+}

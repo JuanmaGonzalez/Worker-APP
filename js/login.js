@@ -48,12 +48,12 @@ $('#submitBtn').click(function (event) {
     let objeto = milogin();
     if (objeto.isValid ) {
         $.ajax({
-            url: ' http://www.mocky.io/v2/5ae08e423200006f00510c70',
+            url: 'http://www.mocky.io/v2/5ae0e1b63200007b00510d5a',
             method: 'POST',
             data: objeto
         }).done(function (datoRecibido) {
             if (datoRecibido.result) {
-                sessionStorage.setItem('token', 'ksjahdfkl23r732w2yedwejhd76348dgwyedg76');
+                sessionStorage.setItem('token', datoRecibido.token);
                 location.href = './login_confirm.html';
             } else {
                 $('#pass_error').html('<p class="error">usuario y Contraseña errónea!</p>')
