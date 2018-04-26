@@ -1,3 +1,4 @@
+// muestra un mensaje en la interfaz
 function mostrar(mensaje) {
     let listItem = '';
     switch(mensaje.autor) {
@@ -25,7 +26,7 @@ function mostrar(mensaje) {
 }
 
 
-
+// persistencia de las conversaciones
 function almacenar(mensaje) {
     let chat = localStorage.getItem('chat');
     chat = chat ? JSON.parse(chat) : [];
@@ -35,17 +36,18 @@ function almacenar(mensaje) {
 
 
 
+// evento lanzado por el usuario al hacer click
 function enviar(socket) {
-    let imagen  = null;
+    let adjunto = null;
     let texto   = document.getElementById('texto').value;
-    if (texto || imagen) {
+    if (texto || adjunto) {
         document.getElementById('texto').value = '';
         let ahora   = new Date();
         let objetoMensaje = {
             autor:   "self",
             nombre:  getSessionNombre(),
             mensaje: texto,
-            imagen:  imagen,
+            imagen:  adjunto,
             hora:    `${ahora.getHours()}:${ahora.getMinutes()}:${ahora.getSeconds()}`
         };
         almacenar(objetoMensaje);
@@ -56,6 +58,7 @@ function enviar(socket) {
 
 
 
+// evento lanzado por WebSocket cuando recibe un mensaje de su interlocutor
 function recibir(event) {
     let mensaje = JSON.parse(event.data);
     mensaje.autor = mensaje.autor === "self" ? "other" : mensaje.autor;
@@ -82,6 +85,9 @@ function recibir(event) {
             event.preventDefault();
             enviar(chatSocket);
         });
+        document.getElementById('icono_btn_adjunto').onclick = function() { // icono visible
+            document.getElementById("btn_adjunto").click(); // botón habilitado pero oculto al usuario
+        };
 
         // carga / inicializacion conversaciones chat
         let chat = localStorage.getItem('chat');
@@ -90,8 +96,7 @@ function recibir(event) {
             for (let i = 0;   i < chat.length;   i++) {
                 mostrar( chat[i] );
             }
-        } else {
-            // XXX carga una conversación a modo de muestra
+        } else { // XXX BORRABLE: carga una conversación a modo de demo
             $.ajax('http://www.mocky.io/v2/5ae039093200005e00510a5d').done(function(respuestaServidor){
                 for (let i = 0;   i < respuestaServidor.length;   i++) {
                     mostrar   ( respuestaServidor[i] );

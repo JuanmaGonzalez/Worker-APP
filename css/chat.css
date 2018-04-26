@@ -1,5 +1,10 @@
 /* source: https://codepen.io/Varo/pen/YPmwpQ */
 
+/* .emojis */
+#btn_adjunto {
+    visibility: hidden;
+}
+
 html, body {
     background: ;
     font-family: 'Lato', sans-serif;
