@@ -22,7 +22,7 @@ function getSessionAvatar() {
 
 function getSessionNombre() {
     let usuarioAutenticado = getUsuarioAutenticado();
-    return usuarioAutenticado ? usuarioAutenticado.nombre : './imgs/no_user.png';
+    return usuarioAutenticado ? usuarioAutenticado.nombre : 'Visitante';
 }
 
 
