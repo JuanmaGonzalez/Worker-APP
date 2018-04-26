@@ -43,15 +43,6 @@ let milogin = function () {
 
 
 
-// function guardarDatosSesionUsuarioAutenticado(datosUsuario) {datosUsuario
-//     let nombreUsuario = sessionStorage.getItem('nombreUsuario');
-//     sessionStorage.setItem('nombreUsuario', nombreUsuario ? nombreUsuario : 'Fina'); // seria null si no se paso por "registro"
-//     sessionStorage.setItem('avatarUsuario', datosUsuario.avatarUsuario);
-//     sessionStorage.setItem('token',         datosUsuario.token);
-// }
-
-
-
 $('#submitBtn').click(function (event) {
     event.preventDefault();
     let objeto = milogin();
