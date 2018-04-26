@@ -43,13 +43,7 @@ function getAdjunto(event) {
     if (!(window.File && window.FileReader && window.FileList && window.Blob)) {
         alert('Tu dispositivo no tiene completo soporte para trabajar con ficheros.');
     } else {
-        let archivos = evt.target.files; // objeto: FileList
-        for (let i = 0, j = 0;   i < archivos.length;   i++) {
-            if ( archivos[i].type.match('image.*') ) {
-                // TODO procesar archivos, URLs, etc.
-                ++j;
-            }
-        }
+        // TODO procesar archivos, URLs, etc.
         // TODO subir archivos, ...
     }
     return URLs;
@@ -58,8 +52,9 @@ function getAdjunto(event) {
 
 
 // evento lanzado por el usuario al hacer click
+// event opcional
 function enviar(socket, event) {
-    let adjunto = getAdjunto(event);
+    let adjunto = event ? getAdjunto(event) : null;
     let texto   = document.getElementById('texto').value;
     if (texto || adjunto) {
         document.getElementById('texto').value = '';
