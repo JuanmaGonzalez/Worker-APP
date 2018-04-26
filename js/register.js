@@ -74,17 +74,17 @@ $('#register').click(function (evnt) {
     console.log('objeto a enviar:', objeto);
     if (objeto.valid) {
         $.ajax({
-            url: 'http://www.mocky.io/v2/5ad782c73000005900e584a2', 
+            url: 'http://www.mocky.io/v2/5ae1741c2d000057009d7c06',
             method: 'POST',
             data: objeto
         })
             .done(function (datoRecibido) {
                 console.log('datoRecibido:', datoRecibido);
                 if (datoRecibido.result) {
-                    sessionStorage.setItem('nombreUsuario', objeto.values.name);
+                    sessionStorage.setItem('usuarioAutenticado', JSON.stringify(datoRecibido.usuario));
                     location.href= './register_confirm.html'
                 } else {
-                    
+                    $('#pass_error').html('<p class="error">usuario ya existente!</p>')
                 }
 
             });
