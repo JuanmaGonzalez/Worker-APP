@@ -81,6 +81,7 @@ $('#register').click(function (evnt) {
             .done(function (datoRecibido) {
                 console.log('datoRecibido:', datoRecibido);
                 if (datoRecibido.result) {
+                    sessionStorage.setItem('nombreUsuario', objeto.values.name);
                     location.href= './register_confirm.html'
                 } else {
                     

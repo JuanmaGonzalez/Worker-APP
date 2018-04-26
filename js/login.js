@@ -54,6 +54,8 @@ $('#submitBtn').click(function (event) {
         }).done(function (datoRecibido) {
             if (datoRecibido.result) {
                 sessionStorage.setItem('token', datoRecibido.token);
+                let nombreUsuario = sessionStorage.getItem('nombreUsuario');
+                sessionStorage.setItem('nombreUsuario', nombreUsuario ? nombreUsuario : 'Fina'); // seria null si no se paso por "registro"
                 location.href = './login_confirm.html';
             } else {
                 $('#pass_error').html('<p class="error">usuario y Contraseña errónea!</p>')
