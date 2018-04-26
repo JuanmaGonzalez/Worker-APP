@@ -43,19 +43,26 @@ let milogin = function () {
 
 
 
+// function guardarDatosSesionUsuarioAutenticado(datosUsuario) {datosUsuario
+//     let nombreUsuario = sessionStorage.getItem('nombreUsuario');
+//     sessionStorage.setItem('nombreUsuario', nombreUsuario ? nombreUsuario : 'Fina'); // seria null si no se paso por "registro"
+//     sessionStorage.setItem('avatarUsuario', datosUsuario.avatarUsuario);
+//     sessionStorage.setItem('token',         datosUsuario.token);
+// }
+
+
+
 $('#submitBtn').click(function (event) {
     event.preventDefault();
     let objeto = milogin();
     if (objeto.isValid ) {
         $.ajax({
-            url: 'http://www.mocky.io/v2/5ae0e1b63200007b00510d5a',
+            url: 'http://www.mocky.io/v2/5ae1741c2d000057009d7c06',
             method: 'POST',
             data: objeto
         }).done(function (datoRecibido) {
             if (datoRecibido.result) {
-                sessionStorage.setItem('token', datoRecibido.token);
-                let nombreUsuario = sessionStorage.getItem('nombreUsuario');
-                sessionStorage.setItem('nombreUsuario', nombreUsuario ? nombreUsuario : 'Fina'); // seria null si no se paso por "registro"
+                sessionStorage.setItem('usuarioAutenticado', JSON.stringify(datoRecibido.usuario));
                 location.href = './login_confirm.html';
             } else {
                 $('#pass_error').html('<p class="error">usuario y Contraseña errónea!</p>')

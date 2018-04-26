@@ -43,7 +43,7 @@ function enviar(socket) {
         let ahora   = new Date();
         let objetoMensaje = {
             autor:   "self",
-            nombre:  sessionStorage.getItem('nombreUsuario'),
+            nombre:  getSessionNombre(),
             mensaje: texto,
             imagen:  imagen,
             hora:    `${ahora.getHours()}:${ahora.getMinutes()}:${ahora.getSeconds()}`
@@ -71,6 +71,7 @@ function recibir(event) {
         alert('Su dispositivo no soporta la tecnología WebSocket necesaria para hacer funcionar el chat.');
     } else {
         // establecer WebSocket
+        // XXX http://websocketstest.com
         const URL = 'ws://echo.websocket.org/'; // devuelve como respuesta el mensaje que reciba
         let chatSocket = new WebSocket(URL); // PROTOCOLO: atributo opcional
         
@@ -87,15 +88,12 @@ function recibir(event) {
         if (chat) {
             chat = JSON.parse(chat);
             for (let i = 0;   i < chat.length;   i++) {
-                //console.log('from localStorage', chat[i] );
                 mostrar( chat[i] );
             }
         } else {
-            // http://websocketstest.com
+            // XXX carga una conversación a modo de muestra
             $.ajax('http://www.mocky.io/v2/5ae039093200005e00510a5d').done(function(respuestaServidor){
-                console.log('respuestaServidor', respuestaServidor);
                 for (let i = 0;   i < respuestaServidor.length;   i++) {
-                    //console.log('from AJAX', chat[i] );
                     mostrar   ( respuestaServidor[i] );
                     almacenar ( respuestaServidor[i] );
                 }

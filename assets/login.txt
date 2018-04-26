@@ -1,6 +1,10 @@
-http://www.mocky.io/v2/5ae0e1b63200007b00510d5a
+http://www.mocky.io/v2/5ae1741c2d000057009d7c06
 
 {
-    "result": true,
-    "token":  "ksjahdfkl23r732w2yedwejhd76348dgwyedg76"
+    "result":        true,
+    "usuario": {
+        "token":  "ksjahdfkl23r732w2yedwejhd76348dgwyedg76",
+        "nombre": "Rosa",
+        "avatar": "./imgs/Rosa-clienta.png"
+    }
 }
