@@ -17,11 +17,11 @@
                     <p>${profesionales[i].actividad}</p>
                     <a href="${profesionales[i].detalle}" class="secondary-content">
                         <h5>${profesionales[i].distancia}Km</h5>
-                        <i class="${profesionales[i].distancia > 0 ? 'material-icons no_active' : 'material-icons'}">grade</i>
-                        <i class="${profesionales[i].distancia > 1 ? 'material-icons no_active' : 'material-icons'}">grade</i>
-                        <i class="${profesionales[i].distancia > 2 ? 'material-icons no_active' : 'material-icons'}">grade</i>
-                        <i class="${profesionales[i].distancia > 3 ? 'material-icons no_active' : 'material-icons'}">grade</i>
-                        <i class="${profesionales[i].distancia > 4 ? 'material-icons no_active' : 'material-icons'}">grade</i>
+                        <i class="${profesionales[i].valoracion > 4 ? 'material-icons' : 'material-icons no_active'}">grade</i>
+                        <i class="${profesionales[i].valoracion > 3 ? 'material-icons' : 'material-icons no_active'}">grade</i>
+                        <i class="${profesionales[i].valoracion > 2 ? 'material-icons' : 'material-icons no_active'}">grade</i>
+                        <i class="${profesionales[i].valoracion > 1 ? 'material-icons' : 'material-icons no_active'}">grade</i>
+                        <i class="${profesionales[i].valoracion > 0 ? 'material-icons' : 'material-icons no_active'}">grade</i>
                     </a>
                 <div>
             </li>`;
