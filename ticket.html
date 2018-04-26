@@ -15,74 +15,71 @@
 
 <body class="ticket">
 
-    <nav class="orange darken-4" role="navigation">
-        <div class="nav-wrapper container">
-            <a id="logo-container" href="./index.html" class="brand-logo">WorkerAPP</a>
-            <ul class="right hide-on-med-and-down">
-                <li>
-                    <a href="./index.html">Inicio</a>
-                  </li>
-                  <li>
-                    <a class="conmutadorLog" href="./login.html">Login</a>
-                  </li>
-                  <li>
-                    <a href="./registro.html">Registro</a>
-                  </li>
-                  <li>
-                    <a href="./ticket.html">Último Ticket</a>
-                  </li>
-                  <li>
-                    <a href="./chat.html">Chat</a>
-                  </li>
-                  <li>
-                    <a href="#">Histórico Tickets</a>
-                  </li>
-                  <li>
-                    <a href="#">Mis Favoritos</a>
-                  </li>
+    <header>
+
+        <nav class="orange darken-4" role="navigation">
+            <div class="nav-wrapper container">
+                <a id="logo-container" href="./index.html" class="brand-logo">WorkerAPP</a>
+                <ul class="right user_header">
+                    <li>
+                        <a href="#">
+                            <img src="./imgs/no_user.png" alt="" class="circle">
+                        </a>
+                    </li>
                 </ul>
-        
+
+                <ul class="right hide-on-med-and-down">
+
+                    <li>
+                        <a href="./index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a class="conmutadorLog" href="./login.html">Login</a>
+                    </li>
+                    <li>
+                        <a href="./registro.html">Registro</a>
+                    </li>
+                    <li>
+                        <a href="./ticket.html">Último Ticket</a>
+                    </li>
+                    <li>
+                        <a href="#">Histórico Tickets</a>
+                    </li>
+                    <li>
+                        <a href="#">Mis Favoritos</a>
+                    </li>
+                </ul>
+
                 <ul id="nav-mobile" class="sidenav">
-        
-                  <li>
-                    <a href="./index.html">Inicio</a>
-                  </li>
-                  <li>
-                    <a class="conmutadorLog" href="./login.html">Login</a>
-                  </li>
-                  <li>
-                    <a href="./registro.html">Registro</a>
-                  </li>
-                  <li>
-                    <a href="./ticket.html">Último Ticket</a>
-                  </li>
-                  <li>
-                    <a href="./chat.html">Chat</a>
-                  </li>
-                  <li>
-                    <a href="#">Histórico Tickets</a>
-                  </li>
-                  <li>
-                    <a href="#">Mis Favoritos</a>
-                  </li>
-        
-            </ul>
-            <ul class="right user_header">
-                <li>
-                    <a href="#">
-                        <img src="./imgs/Rosa-clienta.png" alt="" class="circle">
-                    </a>
-                </li>
-            </ul>
-            <a href="#" data-target="nav-mobile" class="sidenav-trigger">
-                <i class="material-icons">menu</i>
-            </a>
-        </div>
-    </nav>
 
+                    <li>
+                        <a href="./index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a class="conmutadorLog" href="./login.html">Login</a>
+                    </li>
+                    <li>
+                        <a href="./registro.html">Registro</a>
+                    </li>
+                    <li>
+                        <a href="./ticket.html">Último Ticket</a>
+                    </li>
+                    <li>
+                        <a href="#">Histórico Tickets</a>
+                    </li>
+                    <li>
+                        <a href="#">Mis Favoritos</a>
+                    </li>
 
+                </ul>
 
+                <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+                    <i class="material-icons">menu</i>
+                </a>
+            </div>
+        </nav>
 
+    </header>
 
     <!-- TICKET: inicio -->
 
@@ -105,9 +102,7 @@
             </div>
         </div>
 
-
         <div class="divider"></div>
-
 
         <!-- fila 2: detalle de servicio realizado -->
         <div class="row fila_ticket">
@@ -116,10 +111,12 @@
             <div class="col s4 col-derecha">
                 <p>
                     <b>Fecha</b>
-                    <br><span id="fecha"></span>
+                    <br>
+                    <span id="fecha"></span>
                     <br>
                     <b>Vencimiento</b>
-                    <br><span id="vencimiento"></span>
+                    <br>
+                    <span id="vencimiento"></span>
                 </p>
             </div>
         </div>
@@ -129,15 +126,22 @@
         <!-- fila 3: totales -->
         <div class="row">
             <div class="col s9">
-                <p><b>Sub TotaL</b>
-                    <br> <b>Iva <span id="iva"></span>%</b>
-                    <br> <b>Total</b>
+                <p>
+                    <b>Sub TotaL</b>
+                    <br>
+                    <b>Iva
+                        <span id="iva"></span>%</b>
+                    <br>
+                    <b>Total</b>
                 </p>
             </div>
             <div class="col s3 col-derecha">
-                <p><span id="subtotal"></span> €
-                    <br><span id="subtotalIVA"></span> €
-                    <br><span id="total"></span> €</p>
+                <p>
+                    <span id="subtotal"></span> €
+                    <br>
+                    <span id="subtotalIVA"></span> €
+                    <br>
+                    <span id="total"></span> €</p>
             </div>
         </div>
 
