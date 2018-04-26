@@ -36,9 +36,30 @@ function almacenar(mensaje) {
 
 
 
+// source: https://www.html5rocks.com/en/tutorials/file/dndfiles/
+// source: https://www.nczonline.net/blog/2012/05/08/working-with-files-in-javascript-part-1/
+function getAdjunto(event) {
+    let URLs = null;
+    if (!(window.File && window.FileReader && window.FileList && window.Blob)) {
+        alert('Tu dispositivo no tiene completo soporte para trabajar con ficheros.');
+    } else {
+        let archivos = evt.target.files; // objeto: FileList
+        for (let i = 0, j = 0;   i < archivos.length;   i++) {
+            if ( archivos[i].type.match('image.*') ) {
+                // TODO procesar archivos, URLs, etc.
+                ++j;
+            }
+        }
+        // TODO subir archivos, ...
+    }
+    return URLs;
+}
+
+
+
 // evento lanzado por el usuario al hacer click
-function enviar(socket) {
-    let adjunto = null;
+function enviar(socket, event) {
+    let adjunto = getAdjunto(event);
     let texto   = document.getElementById('texto').value;
     if (texto || adjunto) {
         document.getElementById('texto').value = '';
@@ -86,7 +107,11 @@ function recibir(event) {
             enviar(chatSocket);
         });
         document.getElementById('icono_btn_adjunto').onclick = function() { // icono visible
-            document.getElementById("btn_adjunto").click(); // botón habilitado pero oculto al usuario
+            let btnAdjunto = document.getElementById("btn_adjunto");        // botón oculto
+            btnAdjunto.click();
+            btnAdjunto.addEventListener('change', function (event) { // ¿hay nuevos archivos?
+                enviar(chatSocket, event);
+            }, false);
         };
 
         // carga / inicializacion conversaciones chat
@@ -96,7 +121,7 @@ function recibir(event) {
             for (let i = 0;   i < chat.length;   i++) {
                 mostrar( chat[i] );
             }
-        } else { // XXX BORRABLE: carga una conversación a modo de demo
+        } else { // XXX BORRABLE: carga una conversación a modo de demo / exhibición
             $.ajax('http://www.mocky.io/v2/5ae039093200005e00510a5d').done(function(respuestaServidor){
                 for (let i = 0;   i < respuestaServidor.length;   i++) {
                     mostrar   ( respuestaServidor[i] );

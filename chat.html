@@ -89,74 +89,13 @@
 
   <section class="row">
     <div class="col s12">
-      <ol id="chat" class="chat">
-
-        <li class="self">
-          <div class="msg">
-            <p>Hola Fina!</p>
-            <p>¿Podrías entrenarme para hacer running los fines de semana?</p>
-            <p>También necesito asesoramiento para elegir zapatillas</p>
-            <time>20:18</time>
-          </div>
-        </li>
-
-        <li class="self">
-          <div class="msg">
-            <img src="./imgs/foto-chat-01.jpg" draggable="false" />
-            <time>20:19</time>
-          </div>
-        </li>
-
-        <li class="other">
-          <div class="msg">
-            <div class="user">Fina
-              <span class="range admin">Admin</span>
-            </div>
-            <p>Lo siento, los tengo ya ocupados</p>
-            <p>Pero te puedo recomendar otro coach, si te parece bien?</p>
-            <time>20:25</time>
-          </div>
-        </li>
-
-        <li class="self">
-          <div class="msg">
-            <p>Ok!</p>
-            <time>20:26</time>
-          </div>
-        </li>
-
-
-        <p class="notification">Fina añadió a Alexandra al grupo
-          <time>20:27</time>
-        </p>
-
-        <li class="other">
-          <div class="msg">
-            <div class="user">Alexandra</div>
-            <p>Fina me ha comentado tu caso, y puedo ayudarte a elegir equipamiento y entrenarte los fines de semana.</p>
-            <p>Te mantedria el precio de Fina. ¿Te parece bien?</p>
-            <time>20:41</time>
-          </div>
-        </li>
-
-        <li class="self">
-          <div class="msg">
-            <p>Sí perfecto. !Alexandra comenzamos este finde!
-              <emoji class="smile" />
-            </p>
-            <time>18:09</time>
-          </div>
-        </li>
-
-        <p class="notification">Fina salió del grupo
-          <time>18:11</time>
-        </p>
+      <ol id="chat" class="chat"></ol>
 
         <div class="typezone">
           <form>
             <input type="text" class="escribir" placeholder="Dime que necesitas..." value="" id="texto" />
             <input type="submit" class="send" value="" id="btn_enviar" />
-            <input type="file" id="btn_adjunto" />
+            <input type="file" id="btn_adjunto" multiple />
             <div class="emojis" id="icono_btn_adjunto"></div>
           </form>
         </div>
