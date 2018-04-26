@@ -8,6 +8,9 @@ a {
   color: #e65100;
 }
 
+nav .brand-logo {
+  margin-left: -60px;
+}
 
  #video-background {
     position: fixed;
@@ -30,7 +33,7 @@ a {
 .user_header img {
   width: 48px;
   position: absolute;
-  margin: 5px -40px;
+  margin: 5px 0px 5px 20px;
   border: solid 1px #FFF;
   background-color: #FFF;
 }
@@ -195,9 +198,11 @@ body.ficha .card {
 body.ticket .card {
   margin: 0.5rem 0 3rem 0;
 }
+
 .container2 {
   padding:60px 0 0 5px ;
 }
+
 .primary {
   float: cover;
   width: 33.3%;
@@ -244,8 +249,16 @@ body.ticket .card {
   .columns {
       width: 100%;
   }
+  .user_header img {
+    margin: 5px -40px;
+  }
 }
 
+@media only screen and (max-width: 992px) {
+  nav .brand-logo {
+    margin-left: 0;
+  }
+}
 
 .container h1 {
 	font-family: "Lobster", cursive;
@@ -259,9 +272,6 @@ div#form-register, div#form-login {
 	padding-top: 50px;
 	margin: auto;
 }
- 
-
- 
  
 .cyan {
 	border-top-right-radius: 10px;
@@ -291,8 +301,6 @@ div#form-register, div#form-login {
 .btn {
 	width: 100%;
 }
-
-
 
 body.message_page {
   padding-top: 120px;
