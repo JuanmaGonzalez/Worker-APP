@@ -1,4 +1,4 @@
-let listaManitas = ['Profesor', 'Lampista', 'Paleta', 'Electricista', 'Mecánico', 'Instalador Aire Acondicionado', 'Entrenador Personal', 'Chofer' ];
+let listaManitas = ['Profesor', 'Lampista', 'Paleta', 'Electricista', 'Mecánico', 'Instalador Aire Acondicionado', 'Entrenador Personal', 'Chofer'];
 
 let sugerencias_div = document.getElementById('sugerencias');
 
@@ -27,10 +27,23 @@ document.getElementById('icon_prefix2').addEventListener('keyup', function (even
     aceptarSugerencia();
 });
 
-   document.getElementById('search_button').onclick = function(){
-       if ($('#icon_prefix2').val() == "") {
+document.getElementById('search_button').onclick = function (evnt) {
+    evnt.preventDefault();
+    if ($('#icon_prefix2').val() == "") {
         $('#sugerencias').html('<p class="error">El campo de búsqueda no puede estar vacío</p>');
-       } else {
-        location.href='./search_result.html';
-       }
-   }
+    } else {
+        location.href = './search_result.html';
+    }
+};
+
+document.getElementById('icon_prefix2').onkeypress = function (e) {
+    const ENTER_KEY_CODE = 13;
+    if (e.keyCode == ENTER_KEY_CODE) {
+        document.getElementById('search_button').click();
+    }
+    
+    document.getElementById('search_form').onsubmit = function (evnt) {
+        evnt.preventDefault();
+    };
+    
+};

@@ -16,7 +16,7 @@
 
 <body>
 
-  <header>
+  <header aria-header role="contentinfo">
 
     <nav class="orange darken-4" role="navigation">
       <div class="nav-wrapper container">
@@ -24,7 +24,7 @@
         <ul class="right user_header">
           <li>
             <a href="#">
-              <img src="./imgs/no_user.png" alt="" class="circle">
+              <img src="./imgs/no_user.png" alt="user" class="circle">
             </a>
           </li>
         </ul>
@@ -80,11 +80,11 @@
       </div>
     </nav>
 
-    <div class="row search">
-      <form class="col s12">
+    <div class="row search" role="search">
+      <form class="col s12" id="search_form">
         <div class="row">
           <div class="input-field col s12">
-            <textarea id="icon_prefix2" class="materialize-textarea search"></textarea>
+            <input id="icon_prefix2" type="search" required autofocus>
             <label for="icon_prefix2">Buscar</label>
             <a href="#" id="search_button">
               <i class="material-icons prefix">search</i>
@@ -103,7 +103,7 @@
     <ul id="listaResultados" class="collection"></ul>
   </section>
 
-  <footer class="page-footer orange darken-4">
+  <footer class="page-footer orange darken-4" aria-footer role="contentinfo">
 
     <div class="footer-copyright">
       <div class="container">
