@@ -2,7 +2,8 @@
 
 /* placeholder de los mensajes a enviar del chat */
 .advertencia::placeholder {
-    background-color: darkred !important;
+    color: darkred !important;
+    font-size: .85em;
 }
 
 /* .emojis */
