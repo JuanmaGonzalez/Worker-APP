@@ -23,6 +23,9 @@ function mostrar(mensaje) {
             console.log(`ERROR (chat) tipo de autor desconocido='${mensaje.autor}'`);
     }
     $('#chat').append(listItem);
+    // mover el scroll hasta la parte inferior
+    let altura = $(document).height();
+    $('html, body').animate({ scrollTop: altura }, 10);
 }
 
 
@@ -69,7 +72,11 @@ function enviar(socket, event) {
         almacenar(objetoMensaje);
         mostrar(objetoMensaje);
         socket.send( JSON.stringify(objetoMensaje) );
+    } else {
+        document.getElementById('texto').placeholder ='No has escrito o adjuntado nada para enviar';
+        $('#texto').addClass('advertencia');
     }
+    $('#texto').focusin( function(){$('#texto').removeClass('advertencia')} );
 }
 
 
@@ -124,5 +131,8 @@ function recibir(event) {
                 }
             });
         }
+    }
+    window.onload = function() {
+        document.getElementById('texto').focus();
     }
 })();

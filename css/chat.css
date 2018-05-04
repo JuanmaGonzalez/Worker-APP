@@ -1,5 +1,10 @@
 /* source: https://codepen.io/Varo/pen/YPmwpQ */
 
+/* placeholder de los mensajes a enviar del chat */
+.advertencia::placeholder {
+    background-color: darkred !important;
+}
+
 /* .emojis */
 #btn_adjunto {
     visibility: hidden;
