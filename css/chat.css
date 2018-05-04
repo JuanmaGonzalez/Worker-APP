@@ -6,6 +6,10 @@
     font-size: .85em;
 }
 
+.fake {
+    display: none;
+}
+
 /* .emojis */
 #btn_adjunto {
     visibility: hidden;

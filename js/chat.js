@@ -4,11 +4,18 @@ function mostrar(mensaje) {
     switch(mensaje.autor) {
         case 'self':
         case 'other':
+            let imgURL = mensaje.imagen;
+            let imgName;
+            if(imgURL) {
+                imgName = imgURL.split('/');
+                imgName = imgName[imgName.length - 1];
+                imgName = imgName.substring(0, imgName.length - 4);
+            }
             listItem = `
             <li class="${(mensaje.autor === 'self') ? 'self' : 'other'}">
                 <div class="msg">
                     <div class="user">${(mensaje.autor === 'self') ? '<span class="range admin">Admin</span>' : mensaje.nombre}</div>
-                    ${mensaje.imagen ? `<img src="${mensaje.imagen}" draggable="false" />` : ''}
+                    ${mensaje.imagen ? `<img src="${imgURL}" alt="${imgName}" draggable="false" />` : ''}
                     <p>${mensaje.mensaje ? mensaje.mensaje : ''}</p>
                     <time>${mensaje.hora}</time>
                 </div>
